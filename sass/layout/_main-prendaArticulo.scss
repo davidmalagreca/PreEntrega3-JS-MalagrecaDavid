@@ -1,0 +1,63 @@
+#sectionArticulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .infoArticulo{
+        display: grid;
+        margin: 3%;
+        margin-right: 3%;
+        img{
+            border-radius: 20px;
+            width: 80px;
+        }
+    }
+    .imgArticulo img{
+        width: 500px;
+        border-radius: 20px;
+    }
+}
+.detallesPrenda p{
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    font-size: 12px;
+    text-align: center;
+}
+.sectionArticulo1{
+    display: flex;
+}
+.divSection{
+    display: flex;
+    justify-content: center;
+}
+
+#pArticulo{
+    width: 100%;
+    .pArticulo{
+        width: 100%;
+        font-size: 32px;
+        font-weight: 700;
+        text-align: center;
+    }
+    .prenda-info{
+        text-align: start;
+        ul{
+            text-decoration: none;
+            list-style: none;
+            li{
+                font-weight: bolder;
+                span{
+                    font-weight: lighter;
+                }
+            }
+        }
+    }
+    .detallePrenda{
+        margin-left: 7%;
+        text-align: center;
+        p{
+            font-weight: 400;
+            text-align: start;
+        }
+    }
+}

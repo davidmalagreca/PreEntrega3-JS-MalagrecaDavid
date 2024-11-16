@@ -1,0 +1,26 @@
+#main-somos{
+    padding: 0;
+    margin: 100px;
+}
+#section-somos{
+    display: flex;
+    flex-direction: column;
+    .img-somos {
+        @include centerMixin;
+        width: auto;
+        height: auto;
+    }
+    .info-somos {
+        padding: 3%;
+        font-weight: bold;
+    }
+    .aside_somos{
+        @include centerMixin;
+        margin-top: -100px;
+    }
+}
+
+
+
+
+

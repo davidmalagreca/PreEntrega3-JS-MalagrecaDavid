@@ -1,0 +1,294 @@
+@media screen and (max-width: 510px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        justify-content: center;
+    }
+
+    #sectionbotonindex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-item {
+        display: flex;
+        gap: 7px;
+        flex-direction: column;
+    }
+
+    .center {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .logobong {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logobong img {
+        width: 70px;
+    }
+
+    .buscar {
+        height: auto;
+        width: 100px;
+    }
+
+    .centro {
+        width: auto;
+        margin-top: 55%;
+    }
+
+    .container {
+        display: flex;
+        justify-content: start;
+        max-width: auto;
+        max-height: 100%;
+        overflow: hidden;
+    }
+
+    .footerimg {
+        display: flex;
+        justify-content: start;
+        margin-left: 5%;
+        width: auto;
+    }
+
+    .footerlogo img {
+        width: 35px;
+    }
+
+    .sectioninfotext {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        margin: 4%;
+        width: auto;
+
+        a {
+            font-size: 10px;
+            text-align: center;
+            margin-top: 3px;
+        }
+
+        img {
+            max-width: 50px;
+            justify-content: center;
+        }
+    }
+
+    .sectioninfotext_comprar {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        margin: 4%;
+        width: auto;
+
+        a {
+            font-size: 10px;
+            text-align: center;
+            margin-top: 3px;
+        }
+
+        img {
+            max-width: 50px;
+            justify-content: center;
+        }
+    }
+
+    .grilla {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 10px;
+        max-width: max-content;
+        margin-top: 50px;
+    }
+
+    .articulo {
+        font-size: 15px;
+        width: 100%;
+    }
+
+    .prenda-info ul {
+        display: flex;
+        text-align: start;
+        margin-left: -20px;
+        font-size: 12px;
+    }
+
+    .boxtext {
+        font-size: 20px;
+    }
+
+    .sectionfooter ul {
+        font-size: 7px;
+    }
+
+    .sectionfooter {
+        margin-right: 10%;
+        gap: auto;
+    }
+
+    .tarjetas-footer {
+        column-gap: 5px;
+    }
+
+    .tarjetas-footer img {
+        width: 15px;
+    }
+
+    //**Mas de nosotros**//
+    .quienessomos {
+        p {
+            font-size: 30px;
+        }
+    }
+
+    .aside_somos {
+        margin-top: -100px;
+    }
+
+    #section-somos {
+        display: grid;
+
+        .img-somos {
+            width: 300px;
+            min-width: 20px;
+        }
+    }
+
+    .img-info img {
+        display: grid;
+        margin: 3%;
+        grid-template-columns: auto;
+        justify-content: center;
+        column-gap: 5px;
+
+        button {
+            display: grid;
+            margin: 5px;
+            width: auto;
+            height: auto;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    //**Index Principal**//
+
+    #sectionbotonindex {
+        display: flex;
+        margin: 3%;
+        justify-content: center;
+        row-gap: 1rem;
+
+        .boton {
+            border-radius: 23px;
+            border: none;
+
+            .img-boton {
+                display: grid;
+                border-radius: 20px;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                background: none;
+                border: none;
+                padding: 0;
+            }
+
+        }
+
+    }
+
+    .sectioninfo {
+
+        .sectioninfotext {
+            div {
+                display: grid;
+
+                a {
+                    font-size: 8px;
+                }
+
+                img {}
+            }
+        }
+    }
+
+    .video-container {
+        display: flex;
+        align-self: center;
+        position: relative;
+        width: 300px;
+        height: 250px;
+        overflow: hidden;
+        background: #000000;
+        border-radius: 8px;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+
+        }
+    }
+
+    //**Como comprar**//
+    .compras_section {
+        margin-top: 200px;
+
+        .p_comprar {
+            font-size: 16px;
+        }
+    }
+
+}
+
+    //**Prenda Articulo**//
+    #pArticulo{
+        margin: 5%;
+        width: auto;
+        .pArticulo{
+            width: auto;
+            font-size: 16px;
+        }
+        .prenda-info{
+            ul{
+                
+            width: auto;
+                display: grid;
+                font-size: 12px;
+            }
+        }
+        .detallePrenda{
+            
+            width: auto;
+            font-size: 12px;
+        }
+        .botonAñadir{
+            width: 100%;
+            display: grid;
+            margin: 5%;
+            grid-template-columns: 1fr;
+            button{
+                width: 100px;
+                font-weight: 500;
+                border-radius: 2px solid;
+                background-color: #57ff9e;
+                border-color: rgba(128, 128, 128, 0);
+            }
+        }
+    }
+    .detallesPrenda{
+        p{
+            margin: 5%;
+            width: auto;
+        }
+    }

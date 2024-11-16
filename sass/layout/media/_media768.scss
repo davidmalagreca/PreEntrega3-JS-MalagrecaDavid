@@ -1,0 +1,197 @@
+@media screen and (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        justify-content: center;
+    }
+
+    #main-somos {
+        display: grid;
+    }
+
+    .centro {
+        margin-top: 35%;
+    }
+
+    .confianza {
+        @include centerMixin;
+        margin-top: 30%;
+    }
+
+    .nav-item {
+        display: flex;
+        gap: 7px;
+        flex-direction: column;
+    }
+
+    .sectioninfo img {
+        width: auto;
+        height: auto;
+    }
+
+    .sectioninfotext {
+        display: grid;
+        grid-template-columns: 100px 100px 100px 100px;
+    }
+
+    .sectioninfotext a {
+        font-size: 10px;
+    }
+
+    .center {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logobong {
+        display: flex;
+        justify-content: center;
+    }
+
+    #sectionbotonindex {
+        column-gap: 30px;
+
+        button {
+            width: auto;
+            height: auto;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    #section-somos {
+        .img-somos {
+            @include centerMixin;
+            width: auto;
+            height: auto;
+        }
+
+        .info-somos {
+            padding: 3%;
+            font-weight: bold;
+        }
+
+        .video-container {
+            position: relative;
+            width: 450px;
+            height: 350px;
+            overflow: hidden;
+            background: #000000;
+            border-radius: 8px;
+            margin: 5%;
+
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+
+            }
+        }
+
+        .buscar {
+            height: auto;
+            width: 100px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: start;
+            max-width: auto;
+            max-height: 100%;
+            overflow: hidden;
+        }
+
+        .button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .grilla {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 20px;
+            max-width: max-content;
+            margin-top: 50px;
+            gap: 20px;
+        }
+
+        footer {
+            justify-content: stretch;
+            width: 100%;
+        }
+
+        .sectionfooter ul {
+            width: max-content;
+        }
+
+        .sectionfooter ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .sectionfooter {
+            margin-right: 10%;
+        }
+
+
+
+        .quienessomos {
+            @include centerMixin;
+
+            p {
+                font-size: 40px;
+            }
+        }
+    }
+
+    .aside_somos {
+        margin-top: -100px;
+    }
+
+    .footerimg{
+        display: flex;
+        justify-content: start;
+    }
+
+//**prendaArticulo**//
+#sectionArticulo{
+    display: flex;
+    flex-direction: column;
+    .infoArticulo{
+        display: grid;
+        margin: 3%;
+        margin-right: 3%;
+        img{
+            border-radius: 20px;
+            width: 50px;
+        }
+    }
+    .imgArticulo img{
+        width: 250px;
+        border-radius: 20px;
+    }
+}
+.detallesPrenda p{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    font-size: 12px;
+    text-align: center;
+}
+.sectionArticulo1{
+    display: flex;
+}
+.divSection{
+    display: flex;
+    justify-content: center;
+}
+
+}

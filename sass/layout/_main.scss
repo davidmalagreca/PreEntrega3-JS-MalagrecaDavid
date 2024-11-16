@@ -1,0 +1,123 @@
+@import "../utilities/mixins";
+
+main {
+  margin-top: 13%;
+  margin-bottom: 5%;
+}
+
+.centro div {
+  @include centerMixin;
+  width: fit-content;
+
+}
+
+.button {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  grid-template-rows: auto auto;
+  column-gap: 70px;
+  justify-content: center;
+  width: auto;
+  margin-bottom: 80px;
+}
+
+#sectionbotonindex {
+  display: grid;
+  margin: 3%;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  column-gap: 5%;
+  row-gap: 5%;
+
+  .boton {
+    border-radius: 23px;
+    border: none;
+
+    .img-boton {
+      display: grid;
+      border-radius: 20px;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+  }
+
+}
+
+.boxtext {
+  font-size: 30px;
+  padding: .3125rem;
+  margin: 5px;
+  font-weight: bolder;
+  width: max-content;
+  margin-top: 200px;
+}
+
+
+
+.sectionVideo {
+  width: auto;
+  height: auto;
+  position: relative;
+  margin-top: 10%;
+}
+
+.video-wrapper {
+  @include centerMixin;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.background-image {
+  @include centerMixin;
+  position: absolute;
+  width: auto;
+  height: auto;
+}
+
+.video-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  max-width: 500px;
+  min-width: 200px;
+  min-height: auto;
+  z-index: 2; 
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.sectioninfo {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  justify-content: center;
+  margin-top: 5%;
+  .sectioninfotext{
+    display: flex;
+    text-align: center;
+    gap: 5%;
+  }
+  .time{
+    img{
+      width: 50px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(56, 52, 52);
+    font-weight: bolder;
+  }
+
+
+}
