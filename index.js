@@ -142,15 +142,37 @@ document.getElementById("searchForm").addEventListener("submit", function(event)
 
     const searchInput = document.getElementById("searchInput").value.toLowerCase(); 
 
+
     const articles = {
+        "remera": "/pages/prendaArticulo.html",
+        "remera rockies": "/pages/prendaArticulo.html",
+    };
 
-        "remera": "pages/prendaArticulo.html",
 
-        "remera rockies": "pages/prendaArticulo.html",
+    if (articles[searchInput]) {
 
-        "remeras": "pages/hombre.html",
+        window.location.href = articles[searchInput]; 
 
-        "remeras hombre": "pages/hombre.html",
+    } else {
+
+        alert("Artículo no encontrado."); 
+
+    }
+
+});
+
+
+document.getElementById("searchForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+
+    const searchInput = document.getElementById("searchInput").value.toLowerCase(); 
+
+
+    const articles = {
+        "remeras": "/pages/hombre.html",
+        "remeras hombre": "/pages/hombre.html",
 
     };
 
