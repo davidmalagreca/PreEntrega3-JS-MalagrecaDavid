@@ -95,43 +95,15 @@ function quitarDelCarrito(nombre) {
 }
 
 
-function actualizarDOM(carrito) {
-
-    const carritoContainer = document.getElementById("carritoContainer");
-
-    carritoContainer.innerHTML = "";
-
-    carrito.forEach(item => {
-
-        const div = document.createElement("div");
-
-        div.innerText = `${item.nombre} - Cantidad: ${item.cantidad}`;
-
-        const botonQuitar = document.createElement("button");
-
-        botonQuitar.innerText = "Quitar";
-
-        botonQuitar.addEventListener("click", () => quitarDelCarrito(item.nombre));
-
-        div.appendChild(botonQuitar);
-
-        carritoContainer.appendChild(div);
-
-    });
-
-}
-
 
 document.addEventListener("DOMContentLoaded", () => {
 
     const botonAñadir = document.querySelector(".botonAñadir button");
 
-    botonAñadir.addEventListener("click", añadirAlCarrito);
+
 
     const carrito = JSON.parse(localStorage.getItem("carrito"));
 
-    actualizarDOM(carrito);
-
 });
 
 
@@ -144,34 +116,13 @@ document.getElementById("searchForm").addEventListener("submit", function(event)
 
 
     const articles = {
+
         "remera": "/pages/prendaArticulo.html",
+
         "remera rockies": "/pages/prendaArticulo.html",
-    };
 
-
-    if (articles[searchInput]) {
-
-        window.location.href = articles[searchInput]; 
-
-    } else {
-
-        alert("Artículo no encontrado."); 
-
-    }
-
-});
-
-
-document.getElementById("searchForm").addEventListener("submit", function(event) {
-
-    event.preventDefault();
-
-
-    const searchInput = document.getElementById("searchInput").value.toLowerCase(); 
-
-
-    const articles = {
         "remeras": "/pages/hombre.html",
+
         "remeras hombre": "/pages/hombre.html",
 
     };
