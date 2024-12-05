@@ -1,141 +1,15 @@
-if (!localStorage.getItem("carrito")) {
-
-    localStorage.setItem("carrito", JSON.stringify([]));
-
-}
-
-
-function calcularPrecioTotal(carrito) {
-
-    return carrito.reduce((total, item) => total + (item.precio * item.cantidad), 0);
-
-}
-
-
-function añadirAlCarrito() {
-
-    let carrito = JSON.parse(localStorage.getItem("carrito"));
-
-    const producto = {
-
-        nombre: "Remera Rockies",
-
-        precio: 23500,
-
-        cantidad: 1
-
-    };
-
-
-    const index = carrito.findIndex(item => item.nombre === producto.nombre);
-
-    if (index !== -1) {
-
-        carrito[index].cantidad += 1;
-
-        console.log(`Se ha añadido otra prenda: ${producto.nombre}. Cantidad actual: ${carrito[index].cantidad}`);
-
-    } else {
-
-        carrito.push(producto);
-
-        console.log(`Se ha añadido la prenda: ${producto.nombre}. Precio: ${producto.precio}`);
-
-    }
-
-
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-
-    const precioTotal = calcularPrecioTotal(carrito);
-
-    console.log(`Precio total del carrito: ${precioTotal}`);
-
-    actualizarDOM(carrito);
-
-}
-
-
-function quitarDelCarrito(nombre) {
-
-    let carrito = JSON.parse(localStorage.getItem("carrito"));
-
-    const index = carrito.findIndex(item => item.nombre === nombre);
-
-    if (index !== -1) {
-
-        if (carrito[index].cantidad > 1) {
-
-            const precioAntes = carrito[index].precio;
-
-            carrito[index].cantidad -= 1;
-
-            console.log(`Se ha quitado una prenda: ${nombre}. Cantidad actual: ${carrito[index].cantidad}`);
-
-            console.log(`Precio descontado: ${precioAntes}.`);
-
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("searchForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const searchValue = document.getElementById("searchInput").value.trim().toLowerCase();
+        const redirects = {
+            "remeras": "./pages/hombre.html", 
+            "remera rockies": "./pages/prendaArticulo.html" 
+        };
+        if (redirects[searchValue]) {
+            window.location.href = redirects[searchValue];
         } else {
-
-            console.log(`Se ha eliminado la prenda: ${nombre}. Precio: ${carrito[index].precio}.`);
-
-            carrito.splice(index, 1);
-
+            alert("No se encontró el ID."); 
         }
-
-    }
-
-
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-
-    const precioTotal = calcularPrecioTotal(carrito);
-
-    console.log(`Precio total del carrito: ${precioTotal}`);
-
-    actualizarDOM(carrito);
-
-}
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    const botonAñadir = document.querySelector(".botonAñadir button");
-
-
-
-    const carrito = JSON.parse(localStorage.getItem("carrito"));
-
-});
-
-
-document.getElementById("searchForm").addEventListener("submit", function(event) {
-
-    event.preventDefault();
-
-
-    const searchInput = document.getElementById("searchInput").value.toLowerCase(); 
-
-
-    const articles = {
-
-        "remera": "/pages/prendaArticulo.html",
-
-        "remera rockies": "/pages/prendaArticulo.html",
-
-        "remeras": "/pages/hombre.html",
-
-        "remeras hombre": "/pages/hombre.html",
-
-    };
-
-
-    if (articles[searchInput]) {
-
-        window.location.href = articles[searchInput]; 
-
-    } else {
-
-        alert("Artículo no encontrado."); 
-
-    }
-
+    });
 });
